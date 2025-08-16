@@ -400,7 +400,7 @@ const CourseDetail = () => {
               {/* Course Video/Image */}
               <div className="aspect-video bg-gradient-to-br from-primary/20 to-primary/10 rounded-lg overflow-hidden">
                 <div className="aspect-video bg-gradient-to-br from-primary/20 to-primary/10 rounded-lg overflow-hidden">
-  {course.preview_video_url && (
+  {course.preview_video_url ? (
     <iframe
       src={course.preview_video_url}
       className="w-full h-full object-cover"
@@ -408,20 +408,18 @@ const CourseDetail = () => {
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowFullScreen
     ></iframe>
+  ) : course.cover_image_url ? (
+    <img
+      src={course.cover_image_url}
+      alt={isRTL ? course.title_ar : course.title_en}
+      className="w-full h-full object-cover"
+    />
+  ) : (
+    <div className="w-full h-full flex items-center justify-center">
+      <Play className="w-16 h-16 text-primary" />
+    </div>
   )}
 </div>
-                ) : course.cover_image_url ? (
-                  <img 
-                    src={course.cover_image_url}
-                    alt={isRTL ? course.title_ar : course.title_en}
-                    className="w-full h-full object-cover"
-                  />
-                ) : (
-                  <div className="w-full h-full flex items-center justify-center">
-                    <Play className="w-16 h-16 text-primary" />
-                  </div>
-                )}
-              </div>
 
               {/* Course Title and Description */}
               <div className="space-y-4">
