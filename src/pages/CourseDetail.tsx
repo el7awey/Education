@@ -397,14 +397,18 @@ const CourseDetail = () => {
           <div className="grid lg:grid-cols-3 gap-8">
             {/* Main Content */}
             <div className="lg:col-span-2 space-y-6">
-              {/* Course Video / Image */}
+{/* Course Video / Image */}
 <div className="aspect-video bg-gradient-to-br from-primary/20 to-primary/10 rounded-lg overflow-hidden">
   {course.preview_video_url ? (
     <iframe
-      src={course.preview_video_url}
+      src={
+        course.preview_video_url.includes('youtube.com') || course.preview_video_url.includes('youtu.be')
+          ? `${course.preview_video_url.replace('watch?v=', 'embed/')}?autoplay=0&muted=1&playsinline=1`
+          : course.preview_video_url
+      }
       className="w-full h-full object-cover"
       frameBorder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allow="autoplay; fullscreen; picture-in-picture"
       allowFullScreen
     ></iframe>
   ) : course.cover_image_url ? (
@@ -418,7 +422,8 @@ const CourseDetail = () => {
       <Play className="w-16 h-16 text-primary" />
     </div>
   )}
-</div> {/* <-- أغلق div الفيديو هنا */}
+</div>
+ {/* <-- أغلق div الفيديو هنا */}
 
               {/* Course Title and Description */}
               <div className="space-y-4">
