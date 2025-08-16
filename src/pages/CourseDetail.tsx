@@ -399,15 +399,17 @@ const CourseDetail = () => {
             <div className="lg:col-span-2 space-y-6">
               {/* Course Video/Image */}
               <div className="aspect-video bg-gradient-to-br from-primary/20 to-primary/10 rounded-lg overflow-hidden">
-                {course.preview_video_url && (
-  <iframe
-    src={course.preview_video_url}
-    className="w-full h-full object-cover"
-    frameBorder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowFullScreen
-  ></iframe>
-)}
+                <div className="aspect-video bg-gradient-to-br from-primary/20 to-primary/10 rounded-lg overflow-hidden">
+  {course.preview_video_url && (
+    <iframe
+      src={course.preview_video_url}
+      className="w-full h-full object-cover"
+      frameBorder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowFullScreen
+    ></iframe>
+  )}
+</div>
                 ) : course.cover_image_url ? (
                   <img 
                     src={course.cover_image_url}
