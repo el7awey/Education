@@ -1,0 +1,180 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Educational Platform Design System
+Primary: Dark Blue #1a3e72
+Secondary: Gold #f4b400
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Educational Platform Colors */
+    --background: 0 0% 100%;
+    --foreground: 210 45% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 210 45% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 210 45% 15%;
+
+    /* Primary: Dark Blue #1a3e72 */
+    --primary: 210 65% 28%;
+    --primary-foreground: 0 0% 100%;
+    --primary-hover: 210 65% 25%;
+    --primary-light: 210 65% 35%;
+
+    /* Secondary: Gold #f4b400 */
+    --secondary: 45 95% 48%;
+    --secondary-foreground: 210 45% 15%;
+    --secondary-hover: 45 95% 45%;
+    --secondary-light: 45 95% 55%;
+
+    /* Neutral colors */
+    --muted: 210 40% 96%;
+    --muted-foreground: 210 15% 50%;
+
+    --accent: 210 40% 96%;
+    --accent-foreground: 210 45% 15%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 210 20% 88%;
+    --input: 210 20% 88%;
+    --ring: 210 65% 28%;
+
+    --radius: 0.75rem;
+
+    /* Educational specific colors */
+    --success: 120 60% 45%;
+    --success-foreground: 0 0% 100%;
+    --warning: 35 85% 55%;
+    --warning-foreground: 0 0% 100%;
+    --info: 200 80% 50%;
+    --info-foreground: 0 0% 100%;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(210 65% 28%), hsl(210 65% 35%));
+    --gradient-secondary: linear-gradient(135deg, hsl(45 95% 48%), hsl(45 95% 55%));
+    --gradient-hero: linear-gradient(135deg, hsl(210 65% 28%) 0%, hsl(210 65% 35%) 50%, hsl(45 95% 48%) 100%);
+
+    /* Shadows */
+    --shadow-soft: 0 2px 8px -2px hsl(210 65% 28% / 0.1);
+    --shadow-medium: 0 4px 12px -4px hsl(210 65% 28% / 0.15);
+    --shadow-strong: 0 8px 24px -8px hsl(210 65% 28% / 0.2);
+    --shadow-glow: 0 0 32px hsl(45 95% 48% / 0.3);
+
+    /* Typography */
+    --font-arabic: 'Cairo', sans-serif;
+    --font-english: 'Poppins', sans-serif;
+
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-fast: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* Sidebar */
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 210 45% 15%;
+    --sidebar-primary: 210 65% 28%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 210 40% 96%;
+    --sidebar-accent-foreground: 210 45% 15%;
+    --sidebar-border: 210 20% 88%;
+    --sidebar-ring: 210 65% 28%;
+  }
+
+  .dark {
+    /* Dark mode colors */
+    --background: 210 45% 8%;
+    --foreground: 0 0% 95%;
+
+    --card: 210 45% 10%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 210 45% 10%;
+    --popover-foreground: 0 0% 95%;
+
+    /* Primary: Lighter blue for dark mode */
+    --primary: 210 80% 65%;
+    --primary-foreground: 210 45% 8%;
+    --primary-hover: 210 80% 70%;
+    --primary-light: 210 80% 75%;
+
+    /* Secondary: Softer gold for dark mode */
+    --secondary: 45 85% 60%;
+    --secondary-foreground: 210 45% 8%;
+    --secondary-hover: 45 85% 65%;
+    --secondary-light: 45 85% 70%;
+
+    --muted: 210 45% 15%;
+    --muted-foreground: 210 15% 70%;
+
+    --accent: 210 45% 15%;
+    --accent-foreground: 0 0% 95%;
+
+    --destructive: 0 75% 65%;
+    --destructive-foreground: 0 0% 95%;
+
+    --border: 210 45% 20%;
+    --input: 210 45% 20%;
+    --ring: 210 80% 65%;
+
+    /* Educational specific colors - dark mode */
+    --success: 120 50% 55%;
+    --warning: 35 80% 65%;
+    --info: 200 70% 60%;
+
+    /* Gradients - dark mode */
+    --gradient-primary: linear-gradient(135deg, hsl(210 80% 65%), hsl(210 80% 75%));
+    --gradient-secondary: linear-gradient(135deg, hsl(45 85% 60%), hsl(45 85% 70%));
+    --gradient-hero: linear-gradient(135deg, hsl(210 45% 8%) 0%, hsl(210 80% 65%) 50%, hsl(45 85% 60%) 100%);
+
+    /* Shadows - dark mode */
+    --shadow-soft: 0 2px 8px -2px hsl(0 0% 0% / 0.3);
+    --shadow-medium: 0 4px 12px -4px hsl(0 0% 0% / 0.4);
+    --shadow-strong: 0 8px 24px -8px hsl(0 0% 0% / 0.5);
+    --shadow-glow: 0 0 32px hsl(45 85% 60% / 0.2);
+
+    /* Sidebar - dark mode */
+    --sidebar-background: 210 45% 8%;
+    --sidebar-foreground: 0 0% 95%;
+    --sidebar-primary: 210 80% 65%;
+    --sidebar-primary-foreground: 210 45% 8%;
+    --sidebar-accent: 210 45% 15%;
+    --sidebar-accent-foreground: 0 0% 95%;
+    --sidebar-border: 210 45% 20%;
+    --sidebar-ring: 210 80% 65%;
+  }
+
+  /* Language and RTL support */
+  [dir="rtl"] {
+    direction: rtl;
+    text-align: right;
+  }
+
+  [dir="ltr"] {
+    direction: ltr;
+    text-align: left;
+  }
+
+  .font-arabic {
+    font-family: var(--font-arabic);
+  }
+
+  .font-english {
+    font-family: var(--font-english);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
