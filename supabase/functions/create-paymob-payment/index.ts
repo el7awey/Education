@@ -196,7 +196,7 @@ serve(async (req) => {
         integration_id: integrationId,
         order_id: orderId.toString(),
         billing_data: billingData,
-        redirect_url: 'http://10.89.181.250:8083/courses'
+        redirect_url: 'https://education-jin4.onrender.com'
       })
     });
     const paymentKeyResult = await paymentKeyResponse.json();
