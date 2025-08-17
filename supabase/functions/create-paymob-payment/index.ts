@@ -218,7 +218,7 @@ serve(async (req) => {
       .select()
       .single();
 
-    const redirectUrl = 'http://10.89.181.250:8083/courses';
+    const redirectUrl = 'https://education-jin4.onrender.com';
     const paymentUrl = `https://accept.paymob.com/api/acceptance/iframes/${paymentMethod === 'fawry' ? PAYMOB_CONFIG.IFRAME_IDS.FAWRY : PAYMOB_CONFIG.IFRAME_IDS.CARD}?payment_token=${paymentKey}&redirect_url=${encodeURIComponent(redirectUrl)}`;
 
     return new Response(JSON.stringify({
