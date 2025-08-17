@@ -196,7 +196,7 @@ serve(async (req) => {
         integration_id: integrationId,
         order_id: orderId.toString(),
         billing_data: billingData,
-        redirect_url: 'https://education-jin4.onrender.com'
+        redirect_url: 'redirect_url: 'https://education-jin4.onrender.com/api/paymob/callback''
       })
     });
     const paymentKeyResult = await paymentKeyResponse.json();
@@ -218,7 +218,7 @@ serve(async (req) => {
       .select()
       .single();
 
-    const redirectUrl = 'https://education-jin4.onrender.com';
+    const redirectUrl = 'redirect_url: 'https://education-jin4.onrender.com/api/paymob/callback'';
     const paymentUrl = `https://accept.paymob.com/api/acceptance/iframes/${paymentMethod === 'fawry' ? PAYMOB_CONFIG.IFRAME_IDS.FAWRY : PAYMOB_CONFIG.IFRAME_IDS.CARD}?payment_token=${paymentKey}&redirect_url=${encodeURIComponent(redirectUrl)}`;
 
     return new Response(JSON.stringify({
