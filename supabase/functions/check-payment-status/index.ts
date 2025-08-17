@@ -9,7 +9,7 @@ const corsHeaders = {
 // Paymob Configuration
 const PAYMOB_CONFIG = {
   API_KEY: 'ZXlKaGJHY2lPaUpJVXpVeE1pSXNJblI1Y0NJNklrcFhWQ0o5LmV5SmpiR0Z6Y3lJNklrMWxjbU5vWVc1MElpd2ljSEp2Wm1sc1pWOXdheUk2TVRBMk9EVXlPU3dpYm1GdFpTSTZJbWx1YVhScFlXd2lmUS5CYjFqTWpHY3pMaWdPSTg1d3ZReEZBZEhENkt6aXZlNU94d0tLX0JKQ19rNWhtWF8tNlF6ZURlV2NpOEdod0MwUzhhSEtqXzlsWmthNnpiN1h6alVWUQ==',
-  BASE_URL: '${PAYMOB_CONFIG.BASE_URL}/acceptance/iframes/${integrationId}?payment_token=${paymentKey}',
+  BASE_URL: '  BASE_URL: 'https://accept.paymob.com/api',
   ENVIRONMENT: 'sandbox'
 };
 
